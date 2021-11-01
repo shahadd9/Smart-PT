@@ -161,7 +161,7 @@ public class Goal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 boolean empty=false;
-                //StringBuilder stringBuilder= new StringBuilder();
+                //##StringBuilder stringBuilder= new StringBuilder();
 
                 // for(String a: result){
                 if(result.isEmpty()){
