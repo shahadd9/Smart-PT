@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Equipment">
+
+    <TextView
+        android:id="@+id/equlbl"
+        android:layout_width="355dp"
+        android:layout_height="51dp"
+        android:text="What equipment do you have?"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.595"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.202" />
+
+    <CheckBox
+        android:id="@+id/dumbble"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:background="#EDEDED"
+        android:text="Dumbbles"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.406" />
+
+    <CheckBox
+        android:id="@+id/ball"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:background="#EDEDED"
+        android:text="stability ball"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.613" />
+
+    <CheckBox
+        android:id="@+id/band"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:background="#EDEDED"
+        android:text="Resistance Bands"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <CheckBox
+        android:id="@+id/battleR"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:background="#EDEDED"
+        android:text="Battle Ropes"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.613" />
+
+    <CheckBox
+        android:id="@+id/pullUp"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:background="#EDEDED"
+        android:text="Pull-Up bar"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <CheckBox
+        android:id="@+id/jumpR"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:background="#EDEDED"
+        android:text="jump rope"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.067"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.715" />
+
+    <CheckBox
+        android:id="@+id/kettle"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:background="#EDEDED"
+        android:text="Kettlebells"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.065"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.513" />
+
+    <CheckBox
+        android:id="@+id/barbell"
+        android:layout_width="178dp"
+        android:layout_height="50dp"
+        android:background="#EDEDED"
+        android:text="Barbells"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.908"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.408" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="46dp"
+        android:layout_height="43dp"
+        android:translationZ="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dumbble"
+        app:layout_constraintEnd_toEndOf="@+id/dumbble"
+        app:layout_constraintHorizontal_bias="0.86"
+        app:layout_constraintStart_toStartOf="@+id/dumbble"
+        app:layout_constraintTop_toTopOf="@+id/dumbble"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/dumbbell2"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="47dp"
+        android:layout_height="40dp"
+        android:translationZ="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/battleR"
+        app:layout_constraintEnd_toEndOf="@+id/battleR"
+        app:layout_constraintHorizontal_bias="0.94"
+        app:layout_constraintStart_toStartOf="@+id/battleR"
+        app:layout_constraintTop_toTopOf="@+id/battleR"
+        app:srcCompat="@drawable/battleropes"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="44dp"
+        android:layout_height="42dp"
+        android:translationZ="9dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/kettle"
+        app:layout_constraintEnd_toEndOf="@+id/kettle"
+        app:layout_constraintHorizontal_bias="0.862"
+        app:layout_constraintStart_toStartOf="@+id/kettle"
+        app:layout_constraintTop_toTopOf="@+id/kettle"
+        app:srcCompat="@drawable/kettlebells"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="44dp"
+        android:layout_height="41dp"
+        android:translationZ="9dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/pullUp"
+        app:layout_constraintEnd_toEndOf="@+id/pullUp"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintStart_toStartOf="@+id/pullUp"
+        app:layout_constraintTop_toTopOf="@+id/pullUp"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/pullupbar" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="53dp"
+        android:translationZ="9dp"
+
+        android:layout_height="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/jumpR"
+        app:layout_constraintEnd_toEndOf="@+id/jumpR"
+        app:layout_constraintHorizontal_bias="0.922"
+        app:layout_constraintStart_toStartOf="@+id/jumpR"
+        app:layout_constraintTop_toTopOf="@+id/jumpR"
+        app:srcCompat="@drawable/jumprope"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="35dp"
+        android:layout_height="39dp"
+        android:translationZ="9dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/band"
+        app:layout_constraintEnd_toEndOf="@+id/band"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/band"
+        app:layout_constraintTop_toTopOf="@+id/band"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/resistancebands"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="39dp"
+        android:layout_height="40dp"
+        android:translationZ="9dp"
+
+        app:layout_constraintBottom_toBottomOf="@+id/ball"
+        app:layout_constraintEnd_toEndOf="@+id/ball"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="@+id/ball"
+        app:layout_constraintTop_toTopOf="@+id/ball"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/stabilityball"
+        android:contentDescription="TODO" />
+
+    <ImageView
+        android:id="@+id/imageView11"
+        android:layout_width="45dp"
+        android:layout_height="41dp"
+        android:contentDescription="TODO"
+        android:translationZ="9dp"
+        app:layout_constraintBottom_toBottomOf="@+id/barbell"
+
+        app:layout_constraintEnd_toEndOf="@+id/barbell"
+        app:layout_constraintHorizontal_bias="0.925"
+        app:layout_constraintStart_toStartOf="@+id/barbell"
+        app:layout_constraintTop_toTopOf="@+id/barbell"
+        app:srcCompat="@drawable/dumbbellicon" />
+
+    <Button
+        android:id="@+id/equBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#D8D4D4"
+        android:text="Next"
+        android:textSize="20sp"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.467"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.947"
+        tools:ignore="TextContrastCheck" />
+</androidx.constraintlayout.widget.ConstraintLayout>
