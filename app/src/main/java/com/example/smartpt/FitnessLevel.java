@@ -9,9 +9,13 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class FitnessLevel extends AppCompatActivity {
-    private int level;
     private Button pickDaysBtn;
+    private ArrayList<String> goal;
+    private String level;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +25,8 @@ public class FitnessLevel extends AppCompatActivity {
         SeekBar seekBar = (SeekBar)findViewById(R.id.lvlSeekBar);
         final TextView seekBarValue = (TextView)findViewById(R.id.seekBarValue);
         TextView tLvl= findViewById(R.id.lvl);
-        level=0;
+        goal=getIntent().getStringArrayListExtra("goal");
+        level="Intermediate";
 
         seekBar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener(){
             @Override
@@ -32,15 +37,15 @@ public class FitnessLevel extends AppCompatActivity {
                 int lvl=progress;
                 if(lvl<=33){
                     tLvl.setText("Beginner");
-                    level=1;
+                    level="Beginner";
                 }
                 else if(lvl>33 && lvl<= 66){
                     tLvl.setText("Intermediate");
-                    level=2;
+                    level="Intermediate";
                 }
                 else{
                     tLvl.setText("Professional");
-                    level=3;
+                    level="Professional";
 
                 }
             }
@@ -68,11 +73,10 @@ public class FitnessLevel extends AppCompatActivity {
     }
     public void goTrainingDays(){
         Intent intent= new Intent(this, TrainingDays.class);
+        intent.putExtra("level",level);
+        intent.putExtra("goal",goal);
         startActivity(intent);
     }
-    public int getLevel(){
 
-        return level;
-    }
 
 }

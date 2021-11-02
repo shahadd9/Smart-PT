@@ -31,10 +31,11 @@
             android:name=".FitnessLevel"
             android:exported="true"
             android:parentActivityName=".Goal" />
+
         <activity
             android:name=".Goal"
             android:exported="true"
-            android:parentActivityName=".Loading">
+          >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

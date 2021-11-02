@@ -24,10 +24,11 @@ public class TrainingDays extends AppCompatActivity {
     private int satCount;
     private ArrayList<String> tDays;
     private TextView days;
-    private TextView tip;
+//    private TextView tip;
     private String txt;
-    private FitnessLevel Tlevel;
     private boolean isChoose;
+    private String level;
+    private ArrayList<String> goal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,13 +48,13 @@ public class TrainingDays extends AppCompatActivity {
         isChoose=false;
         tDays= new ArrayList<>();
         count=0;
-        tip= findViewById(R.id.biggenerTip);
-        Tlevel= new FitnessLevel();
+        level= getIntent().getStringExtra("level");
+        goal=getIntent().getStringArrayListExtra("goal");
 
-        if(Tlevel.getLevel() == 1){
 
-            tip.setText("Tip: 2-3 sessions a week are recommended for beginner"+ Tlevel.getLevel());
-        }
+//        tip= findViewById(R.id.biggenerTip);
+
+
 
 
         sun.setOnClickListener(new View.OnClickListener() {
@@ -175,6 +176,9 @@ public class TrainingDays extends AppCompatActivity {
     }
     public void goEqupment(){
         Intent intent= new Intent(this, TrainingPlace.class);
+        intent.putExtra("tDays",tDays);
+        intent.putExtra("goal",goal);
+        intent.putExtra("level",level);
         startActivity(intent);
     }
 

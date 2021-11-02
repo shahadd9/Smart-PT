@@ -28,10 +28,10 @@ public class Goal extends AppCompatActivity {
     private CheckBox ch1,ch2,ch3,ch4,ch5,ch6,ch7;
     private Button b;
     private TextView show;
-    public ArrayList<String> result;
+    private ArrayList<String> focusArea;
     private int count;
-    FirebaseFirestore db;
-    public String userIp;
+    private FirebaseFirestore db;
+    private String userIp;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,23 +48,23 @@ public class Goal extends AppCompatActivity {
 
 
         show=findViewById(R.id.shows);
-        result= new ArrayList<>();
+        focusArea= new ArrayList<>();
         show.setEnabled(false);
 
         WifiManager wifiManager = (WifiManager) getApplicationContext().getSystemService(WIFI_SERVICE);
         userIp=Formatter.formatIpAddress(wifiManager.getConnectionInfo().getIpAddress());
-        show.setText(userIp);
+        //show.setText(userIp);
         ch1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if(ch1.isChecked()){
-                    result.add("Chest");
+                    focusArea.add("Chest");
                     count++;
 
                 }
                 else {
                     count--;
-                    result.remove("Chest");
+                    focusArea.remove("Chest");
                 }
                 activate();
 
@@ -75,13 +75,13 @@ public class Goal extends AppCompatActivity {
             public void onClick(View view) {
 
                 if(ch2.isChecked()){
-                    result.add("Core");
+                    focusArea.add("Core");
                     count++;
 
                 }
                 else {
                     count--;
-                    result.remove("Core");
+                    focusArea.remove("Core");
                 }
                 activate();
             }
@@ -90,14 +90,14 @@ public class Goal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(ch3.isChecked()){
-                    result.add("Glue");
+                    focusArea.add("Glue");
 
                     count++;
 
                 }
                 else {
                     count--;
-                    result.remove("Glue");
+                    focusArea.remove("Glue");
                 }
                 activate();
 
@@ -107,14 +107,14 @@ public class Goal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(ch4.isChecked()){
-                    result.add("Shoulder");
+                    focusArea.add("Shoulder");
 
                     count++;
 
                 }
                 else {
                     count--;
-                    result.remove("Shoulder");
+                    focusArea.remove("Shoulder");
                 }
                 activate();
 
@@ -124,14 +124,14 @@ public class Goal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(ch5.isChecked()){
-                    result.add("Leg");
+                    focusArea.add("Leg");
 
                     count++;
 
                 }
                 else {
                     count--;
-                    result.remove("Leg");
+                    focusArea.remove("Leg");
                 }
                 activate();
 
@@ -141,14 +141,14 @@ public class Goal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(ch6.isChecked()){
-                    result.add("Arm");
+                    focusArea.add("Arm");
 
                     count++;
 
                 }
                 else {
                     count--;
-                    result.remove("Arm");
+                    focusArea.remove("Arm");
                 }
                 activate();
 
@@ -158,14 +158,14 @@ public class Goal extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 if(ch7.isChecked()){
-                    result.add("Back");
+                    focusArea.add("Back");
 
                     count++;
 
                 }
                 else {
                     count--;
-                    result.remove("Back");
+                    focusArea.remove("Back");
                 }
                 activate();
 
@@ -180,7 +180,7 @@ public class Goal extends AppCompatActivity {
             public void onClick(View view) {
                 boolean empty=false;
 
-                if(result.isEmpty()){
+                if(focusArea.isEmpty()){
                     empty=true;
                 }
 
@@ -216,6 +216,7 @@ public class Goal extends AppCompatActivity {
     }
     public void goFittnesLevel(){
         Intent intent= new Intent(this, FitnessLevel.class);
+        intent.putExtra("goal",focusArea);
         startActivity(intent);
     }
 
