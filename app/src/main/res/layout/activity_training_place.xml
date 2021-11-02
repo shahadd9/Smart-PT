@@ -11,16 +11,13 @@
         android:layout_width="290dp"
         android:layout_height="0dp"
         android:layout_marginTop="139dp"
-        android:layout_marginBottom="352dp"
         android:text="Where do you exercise?  "
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
         android:textSize="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.595"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/homeBtn"
@@ -78,16 +75,5 @@
         app:layout_constraintStart_toStartOf="@+id/gymBtn"
         app:layout_constraintTop_toTopOf="@+id/gymBtn"
         app:srcCompat="@drawable/dumbbellicon" />
-
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="227dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="135dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/exPId" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

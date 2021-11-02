@@ -13,8 +13,8 @@ import java.util.ArrayList;
 
 public class TrainingDays extends AppCompatActivity {
     private Button sun,mon,tue,wed,thur,fri,sat,next;
-    private TextView tLbl,lbl;
-    private int count;
+//    private TextView tLbl,lbl;
+//    private int count;
     private int sunCount;
     private int monCount;
     private int tueCount;
@@ -23,18 +23,18 @@ public class TrainingDays extends AppCompatActivity {
     private int friCount;
     private int satCount;
     private ArrayList<String> tDays;
-    private TextView days;
-//    private TextView tip;
+//    private TextView days;
+    private TextView tip;
     private String txt;
-    private boolean isChoose;
+//    private boolean isChoose;
     private String level;
     private ArrayList<String> goal;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_training_days);
-        tLbl=findViewById(R.id.trainingDayslbl);
-        lbl=findViewById(R.id.days);
+//        tLbl=findViewById(R.id.trainingDayslbl);
+//        lbl=findViewById(R.id.days);
         sun= findViewById(R.id.sunBtn);
         mon=findViewById(R.id.monBtn);
         tue=findViewById(R.id.tueBtn);
@@ -42,17 +42,24 @@ public class TrainingDays extends AppCompatActivity {
         thur=findViewById(R.id.thruBtn);
         fri=findViewById(R.id.friBtn);
         sat=findViewById(R.id.satBtn);
-        days= findViewById(R.id.days);
+//        days= findViewById(R.id.days);
         next= findViewById(R.id.next);
         sunCount=0;
-        isChoose=false;
+//        isChoose=false;
         tDays= new ArrayList<>();
-        count=0;
+//        count=0;
         level= getIntent().getStringExtra("level");
         goal=getIntent().getStringArrayListExtra("goal");
 
 
-//        tip= findViewById(R.id.biggenerTip);
+        tip= findViewById(R.id.biggenerTip);
+        if(level.equals("Beginner")){
+            tip.setText("tip: It is recommended for beginners to train 2-3 times a week");
+        }
+        else {
+            tip.setText("");
+
+        }
 
 
 

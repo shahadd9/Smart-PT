@@ -22,7 +22,7 @@
         <activity
             android:name=".TrainingPlace"
             android:exported="true"
-            android:parentActivityName=".TrainingDays" />
+            android:parentActivityName=".FitnessLevel" />
         <activity
             android:name=".TrainingDays"
             android:exported="true"
@@ -34,8 +34,7 @@
 
         <activity
             android:name=".Goal"
-            android:exported="true"
-          >
+            android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
