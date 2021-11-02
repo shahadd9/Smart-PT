@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.smartpt">
 
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,36 +12,29 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartPT">
-
+        <activity
+            android:name=".LoadPa"
+            android:exported="true" />
         <activity
             android:name=".Equipment"
             android:exported="true"
-            android:parentActivityName=".TrainingPlace"/>
-
+            android:parentActivityName=".TrainingPlace" />
         <activity
             android:name=".TrainingPlace"
             android:exported="true"
-            android:parentActivityName=".TrainingDays"
-            />
+            android:parentActivityName=".TrainingDays" />
         <activity
             android:name=".TrainingDays"
             android:exported="true"
-            android:parentActivityName=".FitnessLevel"
-            />
+            android:parentActivityName=".FitnessLevel" />
         <activity
             android:name=".FitnessLevel"
             android:exported="true"
-            android:parentActivityName=".Goal"
-            />
-        <activity
-            android:name=".MainActivity"
-            android:exported="true" />
+            android:parentActivityName=".Goal" />
         <activity
             android:name=".Goal"
             android:exported="true"
-            android:parentActivityName=".MainActivity"
-            >
-
+            android:parentActivityName=".Loading">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
