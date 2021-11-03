@@ -14,27 +14,41 @@
         android:theme="@style/Theme.SmartPT">
         <activity
             android:name=".LoadPa"
-            android:exported="true" />
+            android:exported="true"
+            android:label="@string/Profile"
+            />
         <activity
             android:name=".Equipment"
             android:exported="true"
-            android:parentActivityName=".TrainingPlace" />
+            android:parentActivityName=".TrainingPlace"
+            android:label="@string/Profile"
+            />
         <activity
             android:name=".TrainingPlace"
             android:exported="true"
-            android:parentActivityName=".FitnessLevel" />
+            android:parentActivityName=".FitnessLevel"
+            android:label="@string/Profile"
+            />
         <activity
             android:name=".TrainingDays"
             android:exported="true"
-            android:parentActivityName=".FitnessLevel" />
+            android:parentActivityName=".FitnessLevel"
+            android:label="@string/Profile"
+
+            />
         <activity
             android:name=".FitnessLevel"
             android:exported="true"
-            android:parentActivityName=".Goal" />
+            android:parentActivityName=".Goal"
+            android:label="@string/Profile"
+
+            />
 
         <activity
             android:name=".Goal"
-            android:exported="true" >
+            android:exported="true"
+            android:label="@string/Profile"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
