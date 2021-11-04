@@ -2,7 +2,10 @@ package com.example.smartpt;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
+import android.view.View;
 import android.widget.ImageView;
 import android.net.wifi.WifiManager;
 import android.os.Bundle;
@@ -36,6 +39,10 @@ public class LoadPa extends AppCompatActivity {
     private ArrayList<String> tDays;
     private ArrayList<String> equpmtList;
     private String userIp;
+    private Handler mHandler = new Handler();
+
+    private static int TIME_OUT = 4000; //Time to launch the another activity
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +57,15 @@ public class LoadPa extends AppCompatActivity {
         userIp=Formatter.formatIpAddress(wifiManager.getConnectionInfo().getIpAddress());
         rotateAnimation();
         add();
+
+        //final View myLayout = findViewById(R.id.);
+        mHandler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent intent = new Intent(LoadPa.this, PlanView.class);
+                startActivity(intent);
+            }
+        }, TIME_OUT);
     }
 
     private void add() {
@@ -83,4 +99,6 @@ public class LoadPa extends AppCompatActivity {
 
                 logo.setAnimation(rotate);
     }
+
+
 }
