@@ -58,19 +58,6 @@ public class PlanView extends AppCompatActivity {
 
 
 
-  /*  int marginInDp = (int) TypedValue.applyDimension(
-            TypedValue.COMPLEX_UNIT_DIP, 0, getResources()
-                    .getDisplayMetrics());
-
-
-   void setMargins (View view, int left, int top, int right, int bottom) {
-        if (view.getLayoutParams() instanceof ViewGroup.MarginLayoutParams) {
-            ViewGroup.MarginLayoutParams p = (ViewGroup.MarginLayoutParams) view.getLayoutParams();
-            p.setMargins(left, top, right, bottom);
-            view.requestLayout();
-        }
-    }*/
-
 
 
     @Override
@@ -78,7 +65,6 @@ public class PlanView extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_plan_view);
         LinearLayout exFrame = (LinearLayout) findViewById(R.id.ExFrame);
-        FrameLayout contentFrame = (FrameLayout) findViewById(R.id.contentFrame);
 
         buttonALeart = (Button) findViewById(R.id.alertButton);
         FrameLayout alertFrame = (FrameLayout) findViewById(R.id.alertFrame);
@@ -94,23 +80,8 @@ public class PlanView extends AppCompatActivity {
                 text.setVisibility(View.GONE);
                 alertFrame.setVisibility(View.GONE);
                 v.setVisibility(View.GONE);
-                contentFrame.setPadding(0, 0, 0, 0);
 
 
-                //FrameLayout.LayoutParams params = (FrameLayout.LayoutParams) contentFrame.getLayoutParams();
-                //params.setMargins(0, 0, 0, 0);
-//params.leftMargin = 135; // also not worked
-//params.topMargin = 376;
-                //params.gravity = Gravity.TOP;
-
-                //contentFrame.setLayoutParams(params);
-                // FrameLayout mylayout = (FrameLayout) v.findViewById(R.id.contentFrame);
-                //ViewGroup.MarginLayoutParams params = (MarginLayoutParams) mylayout.getLayoutParams();
-                ///params.setMargins(0, 0, 0, 0);
-                //mylayout.setLayoutParams(params);
-
-                //setMargins(contentFrame, 0, 0, 0, 0);
-                contentFrame.setForegroundGravity(0);
 
 
             }

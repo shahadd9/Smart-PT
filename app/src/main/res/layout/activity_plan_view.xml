@@ -1,30 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context=".PlanView">
-
-<FrameLayout
-    android:id="@+id/contentFrame"
-
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentBottom="true"
+    tools:context=".PlanView">
 
-
-    android:layout_marginTop="74dp">
 
     <FrameLayout
         android:id="@+id/WeeklyFrame"
 
-        android:layout_width="wrap_content"
-        android:layout_height="214dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="12dp"
+        android:layout_width="400dp"
+        android:layout_height="185dp"
+        android:layout_below="@+id/alertFrame"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="13dp"
         android:layout_marginBottom="440dp"
         android:background="@drawable/weekly_textstyle">
 
@@ -45,11 +37,11 @@ tools:context=".PlanView">
 
         <TextView
             android:id="@+id/sessionText"
-            android:layout_width="93dp"
+            android:layout_width="83dp"
             android:layout_height="46dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="291dp"
+            android:layout_marginStart="280dp"
             android:layout_marginTop="32dp"
             android:layout_marginEnd="26dp"
             android:layout_marginBottom="148dp"
@@ -63,7 +55,7 @@ tools:context=".PlanView">
             android:id="@+id/buttonSat"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="7dp"
+            android:layout_marginStart="3dp"
             android:layout_marginTop="120dp"
             android:layout_marginEnd="329dp"
             android:layout_marginBottom="16dp"
@@ -76,7 +68,7 @@ tools:context=".PlanView">
             android:id="@+id/buttonSun"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="60dp"
+            android:layout_marginStart="56dp"
             android:layout_marginTop="120dp"
             android:layout_marginEnd="329dp"
             android:layout_marginBottom="16dp"
@@ -89,7 +81,7 @@ tools:context=".PlanView">
             android:id="@+id/buttonMon"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="113dp"
+            android:layout_marginStart="109dp"
             android:layout_marginTop="120dp"
             android:layout_marginEnd="329dp"
             android:layout_marginBottom="16dp"
@@ -102,7 +94,7 @@ tools:context=".PlanView">
             android:id="@+id/buttonThu"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="272dp"
+            android:layout_marginStart="268dp"
             android:layout_marginTop="120dp"
             android:layout_marginEnd="267dp"
             android:layout_marginBottom="16dp"
@@ -115,7 +107,7 @@ tools:context=".PlanView">
             android:id="@+id/buttonTue"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="166dp"
+            android:layout_marginStart="162dp"
             android:layout_marginTop="120dp"
             android:layout_marginEnd="329dp"
             android:layout_marginBottom="16dp"
@@ -128,7 +120,7 @@ tools:context=".PlanView">
             android:id="@+id/buttonWed"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="219dp"
+            android:layout_marginStart="215dp"
             android:layout_marginTop="120dp"
             android:layout_marginEnd="329dp"
             android:layout_marginBottom="16dp"
@@ -141,7 +133,7 @@ tools:context=".PlanView">
             android:id="@+id/buttonFri"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_marginStart="325dp"
+            android:layout_marginStart="321dp"
             android:layout_marginTop="120dp"
             android:layout_marginEnd="329dp"
             android:layout_marginBottom="16dp"
@@ -149,183 +141,178 @@ tools:context=".PlanView">
             android:text="Fri"
             android:textAllCaps="false"
             android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/ExercisesView"
+            android:layout_width="344dp"
+            android:layout_height="50dp"
+
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="250dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="358dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/ExFrame"
+            android:layout_width="380dp"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/ExercisesView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="340dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="52dp"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="67dp">
+
+                <ImageView
+                    android:id="@+id/imageViewex1"
+                    android:layout_width="107dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ex2" />
+
+                <TextView
+                    android:id="@+id/textViewex1"
+                    android:layout_width="176dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="18dp"
+                    android:text="Exercise 1"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/start1"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    app:srcCompat="@drawable/start" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+
+                >
+
+                <ImageView
+                    android:id="@+id/imageViewex2"
+                    android:layout_width="107dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ex1" />
+
+                <TextView
+                    android:id="@+id/textViewex2"
+                    android:layout_width="176dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="18dp"
+                    android:text="Exercise 2"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/start2"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    app:srcCompat="@drawable/start" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="67dp">
+
+                <ImageView
+                    android:id="@+id/imageViewex3"
+                    android:layout_width="107dp"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@drawable/ex3" />
+
+                <TextView
+                    android:id="@+id/textViewex3"
+                    android:layout_width="176dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="18dp"
+                    android:text="Exercise 3"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <ImageView
+                    android:id="@+id/start3"
+                    android:layout_width="60dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="25dp"
+                    app:srcCompat="@drawable/start" />
+            </TableRow>
+
+        </LinearLayout>
     </FrameLayout>
 
-    <TextView
-        android:id="@+id/ExercisesView"
-        android:layout_width="344dp"
-        android:layout_height="50dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="328dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="358dp"
-        android:text=""
-        android:textColor="@color/black"
-        android:textSize="20dp"
-        android:textStyle="bold" />
+    <FrameLayout
+        android:id="@+id/alertFrame"
 
-    <LinearLayout
-        android:id="@+id/ExFrame"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/ExercisesView"
+        android:layout_width="match_parent"
+        android:layout_height="74dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="400dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="52dp"
-        android:orientation="vertical"
-        android:visibility="invisible">
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="67dp">
-
-            <ImageView
-                android:id="@+id/imageViewex1"
-                android:layout_width="107dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ex2" />
-
-            <TextView
-                android:id="@+id/textViewex1"
-                android:layout_width="176dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="18dp"
-                android:text="Exercise 1"
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-
-            <ImageView
-                android:id="@+id/start1"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                app:srcCompat="@drawable/start" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="67dp"
-
-            >
-
-            <ImageView
-                android:id="@+id/imageViewex2"
-                android:layout_width="107dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ex1" />
-
-            <TextView
-                android:id="@+id/textViewex2"
-                android:layout_width="176dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="18dp"
-                android:text="Exercise 2"
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-
-            <ImageView
-                android:id="@+id/start2"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                app:srcCompat="@drawable/start" />
-        </TableRow>
-
-        <TableRow
-            android:layout_width="match_parent"
-            android:layout_height="67dp">
-
-            <ImageView
-                android:id="@+id/imageViewex3"
-                android:layout_width="107dp"
-                android:layout_height="match_parent"
-                app:srcCompat="@drawable/ex3" />
-
-            <TextView
-                android:id="@+id/textViewex3"
-                android:layout_width="176dp"
-                android:layout_height="match_parent"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="18dp"
-                android:text="Exercise 3"
-                android:textColor="@color/black"
-                android:textSize="18dp" />
-
-            <ImageView
-                android:id="@+id/start3"
-                android:layout_width="60dp"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="25dp"
-                app:srcCompat="@drawable/start" />
-        </TableRow>
-
-    </LinearLayout>
-</FrameLayout>
-
-
-<FrameLayout
-    android:id="@+id/alertFrame"
-
-    android:layout_width="match_parent"
-    android:layout_height="74dp"
-    android:layout_alignParentStart="true"
-    android:layout_alignParentEnd="true"
-    android:layout_marginStart="0dp"
-    android:layout_marginEnd="0dp"
-    android:background="@color/yell"
-
-    >
-
-
-    <TextView
-        android:id="@+id/alertText"
-
-        android:layout_width="330dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="50dp"
-        android:text="Don't forget to a warm up before exercises and cool down after"
-        android:textColor="@color/textYell"
-        android:textSize="17dp"
-        android:textStyle="italic" />
-
-    <Button
-        android:id="@+id/alertButton"
-        style="?android:attr/borderlessButtonStyle"
-        android:layout_width="29dp"
-        android:layout_height="26dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginStart="366dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="7dp"
-        android:layout_marginBottom="44dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
         android:background="@color/yell"
-        android:text="X" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="30dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="7dp"
-
-        app:srcCompat="@drawable/waningpng" />
+        >
 
 
-</FrameLayout>
+        <TextView
+            android:id="@+id/alertText"
+
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:text="Don't forget to a warm up before exercises and cool down after"
+            android:textColor="@color/textYell"
+            android:textSize="17dp"
+            android:textStyle="italic" />
+
+        <Button
+            android:id="@+id/alertButton"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="29dp"
+            android:layout_height="26dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="366dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="7dp"
+            android:layout_marginBottom="44dp"
+            android:background="@color/yell"
+            android:text="X" />
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="30dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="7dp"
+
+            app:srcCompat="@drawable/waningpng" />
+
+
+    </FrameLayout>
 
 
 </RelativeLayout>
