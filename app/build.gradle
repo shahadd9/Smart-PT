@@ -35,6 +35,7 @@ dependencies {
 ////    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     implementation 'com.google.firebase:firebase-analytics:20.0.0'
     implementation 'com.google.firebase:firebase-firestore:24.0.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     //implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
 //    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
     testImplementation 'junit:junit:4.+'

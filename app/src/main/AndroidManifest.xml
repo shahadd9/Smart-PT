@@ -13,42 +13,37 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartPT">
         <activity
+            android:name=".updateProfile"
+            android:exported="false"
+            android:label="Update Profile"/>
+        <activity
             android:name=".LoadPa"
             android:exported="true"
-            android:label="@string/Profile"
-            />
+            android:label="@string/Profile" />
         <activity
             android:name=".Equipment"
             android:exported="true"
-            android:parentActivityName=".TrainingPlace"
             android:label="@string/Profile"
-            />
+            android:parentActivityName=".TrainingPlace" />
         <activity
             android:name=".TrainingPlace"
             android:exported="true"
-            android:parentActivityName=".FitnessLevel"
             android:label="@string/Profile"
-            />
+            android:parentActivityName=".FitnessLevel" />
         <activity
             android:name=".TrainingDays"
             android:exported="true"
-            android:parentActivityName=".FitnessLevel"
             android:label="@string/Profile"
-
-            />
+            android:parentActivityName=".FitnessLevel" />
         <activity
             android:name=".FitnessLevel"
             android:exported="true"
-            android:parentActivityName=".Goal"
             android:label="@string/Profile"
-
-            />
-
+            android:parentActivityName=".Goal" />
         <activity
             android:name=".Goal"
             android:exported="true"
-            android:label="@string/Profile"
-            >
+            android:label="@string/Profile">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
