@@ -3,4 +3,15 @@
     <string name="n" />
     <string name="Equipment">Equipment</string>
     <string name="Profile">Create Profile</string>
+
+    <string-array name="weightUnits">
+        <item>Kg</item>
+        <item>lbs</item>
+    </string-array>
+
+    <string-array name="heightUnits">
+        <item>cm</item>
+        <item>ft</item>
+    </string-array>
+
 </resources>

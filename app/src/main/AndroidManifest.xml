@@ -13,8 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SmartPT">
         <activity
-            android:name=".PlanView"
-            android:exported="false" />
+            android:name=".updateProfile"
+            android:exported="false"
+            android:label="Update Profile"/>
         <activity
             android:name=".LoadPa"
             android:exported="true"
